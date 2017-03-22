@@ -11,7 +11,7 @@ npm install --save ng-drag-drop-list
 Add `DragDropListModule` to your list of module imports:
 
 ```typescript
-import {DragDropListModule} from 'ng2-drag-drop-list';
+import {DragDropListModule} from 'ng-drag-drop-list';
 
 @NgModule({
   imports: [
