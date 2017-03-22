@@ -12,8 +12,8 @@ export class DragDropListDirective{
 
     @Input("dragDropList") public data:[number,Array<any>];
 
-    @Input("dragged-class") dragged:string ;
-    @Input("dragg-overed-class") draggOvered:string ;
+    @Input("dragged") dragged:string ;
+    @Input("drag-over") draggOvered:string ;
 
     @Output() onDrop = new EventEmitter();
     public shift_down:boolean = false;

@@ -1,9 +1,9 @@
 {
-  "name": "ng2-drag-drop-list",
+  "name": "ng-drag-drop-list",
   "version": "1.0.0",
-  "description": "drag and drop list for ng2",
+  "description": "drag and drop list for angular 2",
   "scripts": {},
-  "devDependencies": {
+  "dependencies": {
     "@angular/common": "^2.4.3",
     "@angular/compiler": "^2.4.3",
     "@angular/compiler-cli": "^2.4.3",
