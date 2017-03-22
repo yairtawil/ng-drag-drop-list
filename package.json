@@ -1,0 +1,21 @@
+{
+  "name": "ng2-drag-drop-list",
+  "version": "1.0.0",
+  "description": "drag and drop list for ng2",
+  "scripts": {},
+  "devDependencies": {
+    "@angular/common": "^2.4.3",
+    "@angular/compiler": "^2.4.3",
+    "@angular/compiler-cli": "^2.4.3",
+    "@angular/core": "^2.4.3",
+    "@angular/platform-browser": "^2.4.3",
+    "@angular/platform-server": "^2.4.3",
+    "rxjs": "5.0.3",
+    "tslint": "^4.3.1",
+    "typescript": "^2.1.5",
+    "zone.js": "^0.7.5"
+  },
+  "keywords": [],
+  "author": "YairTawil",
+  "license": "ISC"
+}
