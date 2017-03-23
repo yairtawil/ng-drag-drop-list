@@ -1,5 +1,11 @@
 # ng-drag-drop-list
 
+[![NPM](https://www.npmjs.com/package/ng-drag-drop-list/)](https://www.npmjs.com/package/ng-drag-drop-list/)
+
+**[Demo](https://plnkr.co/edit/R8YIP6zG42ucBxqjTyKO?p=preview)**
+
+
+
 ## Installation
 
 ```shell
