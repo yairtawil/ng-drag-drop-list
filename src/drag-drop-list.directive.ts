@@ -1,4 +1,4 @@
-import {Directive, Input, ElementRef, Output, EventEmitter, HostListener, HostBinding} from '@angular/core';
+import { Directive, Input, ElementRef, Output, EventEmitter, HostListener, HostBinding } from '@angular/core';
 
 const selector = "[dragDropList]"
 
