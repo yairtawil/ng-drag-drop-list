@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {DragDropListDirective} from './drag-drop-list.directive';
+import { DragDropListDirective } from './drag-drop-list.directive';
 
 @NgModule({
     declarations: [DragDropListDirective],
