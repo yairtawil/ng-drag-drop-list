@@ -1,0 +1,62 @@
+
+div.examples{
+  display:flex;
+  justify-content:center;
+}
+
+h1, h2, h3{
+  font-family:cursive;
+  text-align:center;
+}
+div.colors, div.heroes{
+  margin: 0 50px;
+}
+
+div.container{
+  position: relative;
+  width: 300px;
+  margin:auto;
+}
+
+div.container div{
+  width: 100%;
+  margin: 10px 0;
+  height: 50px;
+  text-align: center;
+  color: white;
+}
+
+div.container div:focus{
+  outline:2px dotted black;
+}
+
+div.heroes div.container div{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  box-shadow: 0px 0px 5px 2px #0033ec;
+  height:100px;
+  font-size:70px;
+  color:#0033ec;
+  font-family:cursive;
+}
+
+div.heroes div.container div:focus, div.heroes div.container div.my-dragged-class{
+  box-shadow: 0px 0px 30px 2px #4aec00;
+
+}
+
+div.heroes div.container div img{
+  height: 100%;
+}
+
+
+div.heroes div.container div.my-dragged-class img{
+  transform: scale(0.5);
+}
+div.heroes div.container div.my-dragged-over-class{
+  color:#4aec00;
+}
+div.heroes div.container div.my-dragged-over-class img{
+  transform: scale(1.5);
+}

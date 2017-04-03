@@ -1,0 +1,48 @@
+<h1>{{title}}</h1>
+
+<h3>
+  <b>mouse:</b>
+  <br>
+  - Drag & Drop to change order.
+</h3>
+
+
+<h3>
+  <b>keyboard:</b>
+  <br>
+  - Up/Down to change focus.
+  <br>
+  - Shift + Up/Down to change order
+</h3>
+
+<div class="examples">
+
+  <div class="colors">
+    <h2> colors: </h2>
+
+    <div class="container">
+      <template ngFor [ngForOf]="arr_colors" let-item let-index="index">
+        <div [dragDropList]="[index, arr_colors]" [style.background]="item" tabindex="0">{{item}}({{index }})</div>
+      </template>
+    </div>
+  </div>
+
+
+  <div class="heroes">
+    <h2>heroes:</h2>
+
+    <div class="container">
+      <template ngFor [ngForOf]="arr_heroes" let-item let-index="index">
+        <div tabindex="0" [dragDropList]="[index, arr_heroes]" dragged="my-dragged-class" drag-over="my-dragged-over-class">
+          {{index}} <img [src]="item"/>
+        </div>
+
+      </template>
+    </div>
+    *css for:
+    <br>
+    .my-dragged-class
+    <br>
+    .my-dragged-over-class
+  </div>
+</div>
