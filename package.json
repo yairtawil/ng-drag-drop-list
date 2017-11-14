@@ -1,6 +1,6 @@
 {
   "name": "ng-drag-drop-list",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "repository": {
     "type": "git",
     "url": "https://github.com/yairtawil/ng-drag-drop-list.git"
@@ -26,7 +26,9 @@
     "typescript": "~2.4.2",
     "zone.js": "^0.7.5"
   },
-  "files": ["dist/*"],
+  "files": [
+    "dist/*"
+  ],
   "keywords": [],
   "author": "YairTawil",
   "license": "MIT"
