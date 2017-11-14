@@ -21,9 +21,12 @@
     <h2> colors: </h2>
 
     <div class="container">
-      <template ngFor [ngForOf]="arr_colors" let-item let-index="index">
-        <div [dragDropList]="[index, arr_colors]" [style.background]="item" tabindex="0">{{item}}({{index }})</div>
-      </template>
+      <div
+        *ngFor="let item of colors; let index=index"
+        [dragDropList]="[index, colors]"
+        [style.background]="item" tabindex="0">
+        {{item}}({{index }})
+      </div>
     </div>
   </div>
 
@@ -32,12 +35,14 @@
     <h2>heroes:</h2>
 
     <div class="container">
-      <template ngFor [ngForOf]="arr_heroes" let-item let-index="index">
-        <div tabindex="0" [dragDropList]="[index, arr_heroes]" dragged="my-dragged-class" drag-over="my-dragged-over-class">
-          {{index}} <img [src]="item"/>
-        </div>
+      <div
+        *ngFor="let item of heroes; let index=index"
+        tabindex="0" [dragDropList]="[index, heroes]"
+        dragged="my-dragged-class"
+        draggOvered="my-dragged-over-class">
+        {{index}} <img [src]="item"/>
+      </div>
 
-      </template>
     </div>
     *css for:
     <br>
