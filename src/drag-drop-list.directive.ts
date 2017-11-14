@@ -9,9 +9,9 @@ export class DragDropListDirective {
   @Input() dragDropList: [number, Array<any>];
   @Input() dragged: string;
   @Input() draggOvered: string;
-  @HostBinding('draggable') draggable = true;
+  @HostBinding() draggable = true;
   @Output() onDrop = new EventEmitter();
-  shift_down = false;
+  shiftDown = false;
 
   @HostListener('dragstart', ['$event'])
   dragstart($event: DragEvent) {
@@ -54,7 +54,7 @@ export class DragDropListDirective {
   keyup($event) {
     switch ($event.which) {
       case 16:
-        this.shift_down = false;
+        this.shiftDown = false;
         this.removeDraggedStyle();
         break;
     }
@@ -70,7 +70,7 @@ export class DragDropListDirective {
         this.keydownUp();
         break;
       case 16:
-        this.shift_down = true;
+        this.shiftDown = true;
         this.addDraggedStyle();
         break;
     }
@@ -112,7 +112,7 @@ export class DragDropListDirective {
   }
 
   keydownDown() {
-    if (this.shift_down) {
+    if (this.shiftDown) {
       this.switchPrev();
     } else {
       this.focusPrev();
@@ -120,7 +120,7 @@ export class DragDropListDirective {
   }
 
   keydownUp() {
-    if (this.shift_down) {
+    if (this.shiftDown) {
       this.switchNext();
     } else {
       this.focusNext();
@@ -130,7 +130,7 @@ export class DragDropListDirective {
   switchNext() {
     const dropIndex = this.dragDropList[0];
     const array = this.dragDropList[1];
-    const swapIndex, temp;
+    let swapIndex, temp;
     swapIndex = (dropIndex + 1) % array.length;
     temp = array[dropIndex];
     array[dropIndex] = array[swapIndex];
@@ -160,18 +160,18 @@ export class DragDropListDirective {
     const elem: HTMLElement = this.el.nativeElement;
     const brothers: HTMLCollection = elem.parentElement.children;
     const array = [].slice.call(brothers);
-    const myindex = array.indexOf(this.el.nativeElement);
-    const next_index = (myindex + 1) % array.length;
-    array[next_index].focus();
+    const myIndex = array.indexOf(this.el.nativeElement);
+    const nextIndex = (myIndex + 1) % array.length;
+    array[nextIndex].focus();
   }
 
   focusPrev() {
     const elem: HTMLElement = this.el.nativeElement;
     const brothers: HTMLCollection = elem.parentElement.children;
     const array = [].slice.call(brothers);
-    const myindex = array.indexOf(this.el.nativeElement);
-    const prev_index = (myindex - 1) < 0 ? array.length + (myindex - 1) : (myindex - 1);
-    array[prev_index].focus();
+    const myIndex = array.indexOf(this.el.nativeElement);
+    const prevIndex = (myIndex - 1) < 0 ? array.length + (myIndex - 1) : (myIndex - 1);
+    array[prevIndex].focus();
   }
 
 }
