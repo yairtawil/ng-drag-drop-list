@@ -20,7 +20,7 @@
     "@angular/compiler-cli": "^5.0.0",
     "@angular/core": "^5.0.0",
     "rimraf": "^2.6.2",
-    "rxjs": "5.0.3",
+    "rxjs": "^5.5.2",
     "tslint": "^4.3.1",
     "typescript": "~2.4.2",
     "zone.js": "^0.7.5"
