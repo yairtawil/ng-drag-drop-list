@@ -7,7 +7,7 @@
   },
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
-  "description": "drag and drop list for angular 2",
+  "description": "drag and drop list for angular",
   "scripts": {
     "build": "rimraf dist && tsc"
   },
