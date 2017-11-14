@@ -5,7 +5,8 @@
     "type": "git",
     "url": "https://github.com/yairtawil/ng-drag-drop-list.git"
   },
-  "main": "index.ts",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "description": "drag and drop list for angular 2",
   "scripts": {
     "build": "rimraf dist && tsc"
