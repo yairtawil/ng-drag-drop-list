@@ -15,7 +15,5 @@
   "buildOnSave": false,
   "include": [
     "src/**/*"
-  ],
-  "compileOnSave": false,
-  "buildOnSave": false
+  ]
 }
