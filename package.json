@@ -9,7 +9,7 @@
   "typings": "./dist/index.d.ts",
   "description": "drag and drop list for angular",
   "scripts": {
-    "build": "rimraf dist && tsc"
+    "build": "rimraf dist && ngc"
   },
   "peerDependencies": {
     "@angular/core": "^5.0.0",
