@@ -10,7 +10,9 @@
   "description": "drag and drop list for angular",
   "scripts": {
     "build": "rimraf dist && ngc",
-    "prepublish": "npm run build"
+    "build:docs": "rimraf docs && npm run build --prefix demo && copyfiles demo/dist/**/* docs --up 2",
+    "postversion": "git push --tags",
+    "prepublish": "npm version patch && npm run build",
   },
   "peerDependencies": {
     "@angular/core": "^5.0.0",
