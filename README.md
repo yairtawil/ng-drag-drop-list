@@ -2,14 +2,12 @@
 
 [![NPM](https://nodei.co/npm/ng-drag-drop-list.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ng-drag-drop-list/)
 
-**[Demo](https://plnkr.co/edit/R8YIP6zG42ucBxqjTyKO?p=preview)**
-
-
+**[Demo](https://yairtawil.github.io/ng-drag-drop-list/)**
 
 ## Installation
 
 ```shell
-npm install --save ng-drag-drop-list
+npm install ng-drag-drop-list
 ```
 
 ## Usage
@@ -17,7 +15,7 @@ npm install --save ng-drag-drop-list
 Add `DragDropListModule` to your list of module imports:
 
 ```typescript
-import {DragDropListModule} from 'ng-drag-drop-list';
+import { DragDropListModule } from 'ng-drag-drop-list';
 
 @NgModule({
   imports: [
@@ -39,19 +37,18 @@ import { Component } from '@angular/core';
 templateUrl: './app.component.html',
 })
 export class AppComponent {
-  public arr:string[] = ["blue","red","greenyellow","purple","grey"];
+  arr: string[] = ['blue','red','greenyellow','purple','grey'];
 }
 ```
 
 use the directive in your html templates:
 
 ```html
-  <template ngFor [ngForOf]="arr" let-item let-index="index">
-    <div [dragDropList]="[index, array]" [style.background]="item" tabindex="0">{{item}}({{index }})</div>
-  </template>
-
+    <div *ngFor="let item of arr; let index = index" 
+         [dragDropList]="[index, array]" 
+         [style.background]="item" tabindex="0">{{item}}({{index }})
+    </div>
 ```
-
 
 ## Inputs
 
