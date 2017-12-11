@@ -12,7 +12,7 @@
     "build": "rimraf dist && ngc",
     "build:docs": "rimraf docs && npm run build --prefix example && copyfiles demo/dist/**/* docs --up 2",
     "postversion": "git push --tags",
-    "prepublish": "npm version patch && npm run build"
+    "prepublish": "npm run build:docs && npm version patch && npm run build"
   },
   "peerDependencies": {
     "@angular/core": "^5.0.0",
