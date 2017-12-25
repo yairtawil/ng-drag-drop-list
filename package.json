@@ -10,9 +10,10 @@
   "description": "drag and drop list for angular",
   "scripts": {
     "build": "rimraf dist && ngc",
-    "build:docs": "rimraf docs && npm run build --prefix example && copyfiles example/dist/**/* docs --up 2",
+    "build:gh-pages": "npm run build --prefix demo && copyfiles demo/dist/**/* . --up 2 && node scripts/gh-pages.js",
     "postversion": "git push --tags",
-    "prepublish": "npm run build:docs && npm version patch && npm run build"
+    "prepublishOnly": "npm version patch && npm run build",
+    "test": "echo \"Error: no test specified\""
   },
   "peerDependencies": {
     "@angular/core": "^5.0.0",
