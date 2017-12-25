@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
     "core-js": "^2.4.1",
-    "ng-drag-drop-list": "^1.0.17",
+    "ng-drag-drop-list": "latest",
     "rxjs": "^5.5.2",
     "zone.js": "^0.7.6"
   },
