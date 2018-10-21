@@ -1,27 +1,29 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
-    "stripInternal": true,
-
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
     "sourceMap": true,
+    "declaration": false,
+    "module": "es2015",
+    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": true,
-    "declaration": true,
-    "outDir": "dist/",
-    "lib": ["dom", "es5", "es2015"]
-  },
-  "include": [
-    "src/index.ts"
-  ],
-  "compileOnSave": false,
-  "buildOnSave": false,
-  "angularCompilerOptions": {
-    "skipTemplateCodegen": true
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "ng-drag-drop-list": [
+        "dist/ng-drag-drop-list"
+      ],
+      "ng-drag-drop-list/*": [
+        "dist/ng-drag-drop-list/*"
+      ]
+    }
   }
 }
