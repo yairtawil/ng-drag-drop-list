@@ -17,16 +17,17 @@ before_script:
 
 script:
   - "npm run test"
-  - "npm run build:prod"
 
 cache:
   directories:
      - "./node_modules"
+
 before_deploy:
-  -
+  - "npm run build:prod"
+
 deploy:
   provider: script
-  script: npm run build:gh-pages
+  script: npm run deploy:gh-pages
   skip_cleanup: true
   on:
     branch: master
