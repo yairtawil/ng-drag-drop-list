@@ -24,11 +24,6 @@ cache:
 
 before_deploy:
   - "npm run build:prod"
-  - provider: script
-    script: cd dist/ng-drag-drop-list
-    skip_cleanup: true
-    on:
-      tags: true
 
 deploy:
   - provider: script
@@ -36,6 +31,11 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
+  - provider: script
+      script: cd dist/ng-drag-drop-list
+      skip_cleanup: true
+      on:
+        tags: true
   - provider: npm
     email: $EMAIL_ADDRESS
     api_key: $NPM_TOKEN

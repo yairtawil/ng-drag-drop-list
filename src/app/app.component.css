@@ -60,3 +60,18 @@ div.heroes div.container div.my-dragged-over-class{
 div.heroes div.container div.my-dragged-over-class img{
   transform: scale(1.5);
 }
+
+div.sq {
+  display: flex;
+  width: 50vw;
+  height: 50vh;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+div.sq div {
+  background: red;
+  box-shadow: 0 0 0 3px orange inset;
+  width: 50%;
+  height: 50%;
+}

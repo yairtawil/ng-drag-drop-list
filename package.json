@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build:prod": "ng build ng-drag-drop-list && ng build --prod ",
+    "build:prod": "ng build ng-drag-drop-list && ng build",
     "publish:lib": "npm publish dist/ng-drag-drop-list",
     "deploy:gh-pages": "gh-pages -r https://$GITHUB_TOKEN@github.com/yairtawil/ng-drag-drop-list.git -d dist/demo",
     "start": "ng serve",
