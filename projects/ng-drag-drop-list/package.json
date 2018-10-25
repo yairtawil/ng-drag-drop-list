@@ -5,6 +5,7 @@
     "type": "git",
     "url": "https://github.com/yairtawil/ng-drag-drop-list.git"
   },
+  "readme": "https://github.com/yairtawil/ng-drag-drop-list#readme",
   "description": "Drag and drop list for angular",
   "peerDependencies": {
     "@angular/common": "^7.0.0",
