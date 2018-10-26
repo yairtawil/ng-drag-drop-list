@@ -1,10 +1,11 @@
 {
   "name": "ng-drag-drop-list",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/yairtawil/ng-drag-drop-list.git"
   },
+  "homepage": "https://github.com/yairtawil/ng-drag-drop-list#readme",
   "readme": "https://github.com/yairtawil/ng-drag-drop-list#readme",
   "description": "Drag and drop list for angular",
   "peerDependencies": {
