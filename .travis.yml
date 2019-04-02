@@ -22,7 +22,7 @@ script:
 
 cache:
   directories:
-     - "./node_modules"
+    - "./node_modules"
 
 before_deploy:
   - "npm run build:example"
@@ -31,7 +31,7 @@ before_deploy:
 deploy:
   - provider: script
     script:
-      - "cd../../ &&  npm run deploy:gh-pages"
+      - "cd ../../ &&  npm run deploy:gh-pages"
     skip_cleanup: true
     on:
       branch: master
