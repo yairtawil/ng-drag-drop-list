@@ -1,4 +1,4 @@
-import { Directive, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Directive, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, HostBinding } from '@angular/core';
 import { fromEvent, Subscription, timer } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
@@ -14,6 +14,8 @@ export class DragDropListDirective implements OnInit, OnDestroy {
     dragElementInitialBoundingBox: ClientRect;
     targetElementInitialBoundingBox: ClientRect;
   };
+
+  @HostBinding(`attr.dragdroplist`) attr = '';
 
   @Input() dragDropList: Array<any>;
 
@@ -41,7 +43,7 @@ export class DragDropListDirective implements OnInit, OnDestroy {
       .filter((elem: HTMLElement): any => {
         return Array.from(elem.attributes)
           .map((attr) => attr.nodeName)
-          .some((name) => name.includes('drag-drop-list'));
+          .some((name) => name.includes('dragdroplist'));
       });
   }
 
