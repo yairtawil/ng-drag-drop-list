@@ -1,2 +1,2 @@
-export * from './drag-drop-list.module';
-export * from './drag-drop-list.directive';
+export * from './lib/drag-drop-list.module';
+export * from './lib/drag-drop-list.directive';

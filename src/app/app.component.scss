@@ -1,0 +1,45 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+img.github {
+  width: 35px;
+}
+
+div.examples {
+  display: flex;
+  justify-content: center;
+  div.example {
+    margin: 0px 30px;
+    &.heroes {
+      div.list mat-card{
+        height: 80px;
+        width: 80px;
+        margin: 8px 0;
+        img {
+          margin: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+mat-grid-list {
+  width: 590px;
+  margin: 15px;
+  mat-grid-tile{
+    background: white;
+    .header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+    span {
+      font-weight: 600;
+    }
+  }
+}

@@ -16,19 +16,22 @@ before_script:
   - sleep 3 # give xvfb some time to start
 
 script:
-  - "npm run test"
+  - "npm run lint:lib"
+  - "npm run test:lib"
+  - "npm run build:lib"
 
 cache:
   directories:
      - "./node_modules"
 
 before_deploy:
-  - "npm run build:prod"
+  - "npm run build:example"
+  - "cd ./dist/ng-drag-drop-list/"
 
 deploy:
   - provider: script
     script:
-      - "npm run deploy:gh-pages"
+      - "cd../../ &&  npm run deploy:gh-pages"
     skip_cleanup: true
     on:
       branch: master

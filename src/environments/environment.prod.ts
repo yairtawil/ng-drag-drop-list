@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  githubLink: 'https://github.com/yairtawil/ng-drag-drop-list'
 };

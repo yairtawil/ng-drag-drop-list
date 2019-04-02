@@ -1,60 +1,58 @@
-<h1>{{title}}</h1>
-
-<h3>
-  <b>mouse:</b>
-  <br>
-  - Drag & Drop to change order.
-</h3>
+<mat-toolbar color="primary">
 
 
-<h3>
-  <b>keyboard:</b>
-  <br>
-  - Up/Down to change focus.
-  <br>
-  - Shift + Up/Down to change order
-</h3>
+  <mat-toolbar-row>
+    <span> Ng Drag Drop List </span>
+    <span class="example-spacer"></span>
 
-<div class="sq">
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
+    <a mat-button
+       aria-label="GitHub Repository"
+       target="_blank"
+       [href]="GITHUB_LINK">
+      <img class="github" alt="github" src="assets/github.svg"/>
+    </a>
+
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+<nav mat-tab-nav-bar color="primary"></nav>
 
 <div class="examples">
+  <div class="example colors">
+    <mat-grid-list cols="3" rowHeight="1:1">
+      <h4> Colors </h4>
 
-  <div class="colors">
-    <h2> colors: </h2>
+      <mat-grid-tile
+        *ngFor="let color of colors"
+        [(dragDropList)]="colors"
+        (dragDropListChange)="toast($event)"
+        [style.background]="rgbTOrgba(color, 0.1)"
+        duration="200"
+        [trigger]="trigger._elementRef.nativeElement">
+        <div class="header">
 
-    <div class="container">
-      <div
-        *ngFor="let item of colors; let index=index"
-        [dragDropList]="[index, colors]"
-        [style.background]="item" tabindex="0">
-        {{item}}({{index }})
-      </div>
-    </div>
+          <button mat-raised-button #trigger>
+            <i class="fa fa-arrows" [style.color]="color"></i>
+          </button>
+
+        </div>
+
+        <span [style.color]="color"> {{color}} </span>
+
+
+      </mat-grid-tile>
+    </mat-grid-list>
   </div>
 
+  <div class="example heroes">
 
-  <div class="heroes">
-    <h2>heroes:</h2>
+    <h4> Heroes </h4>
 
-    <div class="container">
-      <div
-        *ngFor="let item of heroes; let index=index"
-        tabindex="0" [dragDropList]="[index, heroes]"
-        dragged="my-dragged-class"
-        draggOvered="my-dragged-over-class">
-        {{index}} <img [src]="item"/>
-      </div>
-
+    <div class="list">
+      <mat-card *ngFor="let hero of heroes" [(dragDropList)]="heroes">
+        <img mat-card-image [src]="hero">
+      </mat-card>
     </div>
-    *css for:
-    <br>
-    .my-dragged-class
-    <br>
-    .my-dragged-over-class
   </div>
 </div>
